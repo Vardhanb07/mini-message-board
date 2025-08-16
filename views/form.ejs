@@ -1,10 +1,65 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lexend";
+        font-size: 18px;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        border: 1px groove rgba(0, 0, 0, 0.382);
+        border-radius: 4px;
+      }
+      form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      label {
+        text-decoration: underline;
+      }
+      input {
+        font-size: 20px;
+        padding: 3px;
+      }
+      button {
+        border: 0;
+        background-color: rgba(0, 0, 0, 0.291);
+        padding: 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
   <body>
     <form method="POST" action="/new">
+      <div>
         <label for="messageText">Message</label>
-        <input type="text" name="messageText" id="messageText">
+        <input type="text" name="messageText" id="messageText" />
+      </div>
+      <div>
         <label for="messageUser">User</label>
-        <input type="text" name="messageUser" id="messageUser">
+        <input type="text" name="messageUser" id="messageUser" />
+      </div>
       <button type="submit">Submit</button>
     </form>
   </body>

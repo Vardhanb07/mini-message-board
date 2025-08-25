@@ -12,10 +12,10 @@
     <div class="message-part">
       <% for(let i = 0; i < messages.length; i++) { %>
       <div class="message">
-        <p>User: <%= messages[i].user %></p>
-        <p>Text: <%= messages[i].text %></p>
+        <p>User: <%= messages[i].username %></p>
+        <p>Text: <%= messages[i].message %></p>
         <p>Added: <%= messages[i].added %></p>
-        <button><a href= <%=`/messages/${i}`%> >Open</a></button>
+        <button><a href= <%=`/messages/${messages[i].id}`%> >Open</a></button>
       </div>
       <% } %>
     </div>

@@ -48,9 +48,9 @@
   </head>
   <body>
     <div>
-      <p class="element">User: <%= message["user"] %></p>
-      <p class="element">Text: <%= message["text"] %></p>
-      <p class="element">Added: <%= message["added"] %></p>
+      <p class="element">User: <%= message[0]["username"] %></p>
+      <p class="element">Text: <%= message[0]["message"] %></p>
+      <p class="element">Added: <%= message[0]["added"] %></p>
       <button class="element"><a href="/">Go back</a></button>
     </div>
   </body>

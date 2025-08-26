@@ -7,7 +7,7 @@
 }
 a {
   text-decoration: none;
-  color: black
+  color: black;
 }
 body {
   display: flex;
@@ -47,13 +47,17 @@ body {
   border: 1px groove black;
   border-radius: 4px;
 }
-.message > button {
-  font-size: 20px;
-  border: 0;
+.message-options {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.message-options > a {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.373);
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.331);
-  padding: 3px;
-  cursor: pointer;
 }
 .message > p {
   flex: 1;

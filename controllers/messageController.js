@@ -1,4 +1,9 @@
-const { getAllMessages, insertMessage, getMessage } = require("../db/queries");
+const {
+  getAllMessages,
+  insertMessage,
+  getMessage,
+  deleteMessage,
+} = require("../db/queries");
 
 async function getMessages(req, res) {
   const messageData = await getAllMessages();
@@ -15,8 +20,14 @@ async function showMessage(req, res) {
   res.render("open", { message: message });
 }
 
+async function removeMessage(req, res) {
+  await deleteMessage(req.params.id);
+  res.redirect("/")
+}
+
 module.exports = {
   getMessages,
   postMessages,
   showMessage,
+  removeMessage
 };
